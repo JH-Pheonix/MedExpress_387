@@ -33,16 +33,14 @@ void system_init(void)
 
     encoder_x = encoder_init(TIM5_ENCODER, TIM5_ENCODER_CH1_P10_3, TIM5_ENCODER_CH2_P10_1);
     encoder_y = encoder_init(TIM6_ENCODER, TIM6_ENCODER_CH1_P20_3, TIM6_ENCODER_CH2_P20_0);
+    // test_encoder();
 
-    test_encoder();
-
-    servo_left = servo_init(ATOM1_CH2_P33_11, 50, 0, 0.5, 2.5, 180);
+    servo_left = servo_init(ATOM1_CH2_P33_11, 50, 180, 0.5, 2.5, 180);
     servo_right = servo_init(ATOM2_CH4_P33_12, 50, 0, 0.5, 2.5, 180); // 50Hz, 0.5ms~2.5ms, 360度
+    // test_servo();
 
-    test_servo();
-
-    // emm42_1 = emm42_init(UART_5, UART5_RX_P22_3, UART5_TX_P22_2, 115200, EMM42_CHKSUM_CONST_6B);
-
+    emm42_1 = emm42_init(UART_8, UART8_RX_P33_6, UART8_TX_P33_7, 115200, EMM42_CHKSUM_CONST_6B);
+    test_emm42();
     // system_delay_ms(1000);
 
     // while (1)

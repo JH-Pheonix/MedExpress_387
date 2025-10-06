@@ -13,11 +13,14 @@
 #include "attitude.h"
 #include "lcd.h"
 #include "init.h"
+#include "motor_control.h"
 
 void test_lcd();
 void test_motor();
+void test_move_dir();
 void test_stp23l();
 void test_encoder();
 void test_servo();
+void test_emm42();
 
 #endif

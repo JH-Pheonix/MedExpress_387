@@ -72,18 +72,4 @@ typedef struct
     int drug; // 药品编号
 } order_t;
 
-typedef enum
-{
-    DIR_UP,
-    DIR_DOWN,
-    DIR_LEFT,
-    DIR_RIGHT,
-} waypoint_dir_e;
-
-typedef struct
-{
-    int distance;
-    waypoint_dir_e direction;
-} waypoint_t;
-
 #endif

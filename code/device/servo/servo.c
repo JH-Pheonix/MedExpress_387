@@ -12,7 +12,7 @@ static vuint32 angle_to_duty(servo_obj_t *obj, float angle)
     return (vuint32)duty;
 }
 
-servo_obj_t servo_init(pwm_channel_enum pin, vuint32 freq, vuint32 duty, float min_pulse, float max_pulse, float max_angle)
+servo_obj_t servo_init(pwm_channel_enum pin, vuint32 freq, vuint32 angle, float min_pulse, float max_pulse, float max_angle)
 {
     // min_pulse, max_pulse (ms)
     servo_obj_t obj;
@@ -23,7 +23,7 @@ servo_obj_t servo_init(pwm_channel_enum pin, vuint32 freq, vuint32 duty, float m
     obj.max_duty = (vuint32)(max_pulse / (1000.0f / freq) * PWM_DUTY_MAX);
     obj.max_angle = max_angle;
 
-    pwm_init(pin, freq, angle_to_duty(&obj, 0));
+    pwm_init(pin, freq, angle_to_duty(&obj, angle));
 
     return obj;
 }
