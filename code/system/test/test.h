@@ -18,5 +18,6 @@ void test_lcd();
 void test_motor();
 void test_stp23l();
 void test_encoder();
+void test_servo();
 
 #endif

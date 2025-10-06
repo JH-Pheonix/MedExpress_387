@@ -48,3 +48,17 @@ void test_encoder()
         system_delay_ms(100);
     }
 }
+
+void test_servo()
+{
+    while (1)
+    {
+        servo_set_angle(&servo_left, 90);
+        servo_set_angle(&servo_right, 90);
+        system_delay_ms(1000);
+
+        servo_set_angle(&servo_left, 0);
+        servo_set_angle(&servo_right, 180);
+        system_delay_ms(1000);
+    }
+}

@@ -15467,10 +15467,10 @@ Note:
 | .text.stp23l.stp23l_build_packet  | stp23l.o                         |                    | stp23l_build_packet                               | unreferenced |
 | (22537)                           |                                  |                    |                                                   |              |
 | .text.test.test_encoder (22443)   | test.o                           |                    | test_encoder                                      | unreferenced |
-| .bss.init.lidar3 (22485)          | init.o                           |                    | lidar3                                            | unreferenced |
+| .bss.init.lidar_right (22485)          | init.o                           |                    | lidar_right                                            | unreferenced |
 | .bss.init.MAX30102 (22491)        | init.o                           |                    | MAX30102                                          | unreferenced |
 | .bss.init.motor1 (22477)          | init.o                           |                    | motor1                                            | unreferenced |
-| .bss.init.lidar1 (22483)          | init.o                           |                    | lidar1                                            | unreferenced |
+| .bss.init.lidar_left (22483)          | init.o                           |                    | lidar_left                                            | unreferenced |
 | .text.test.test_stp23l (22442)    | test.o                           |                    | test_stp23l                                       | unreferenced |
 | .text.stp23l.stp23l_init (22532)  | stp23l.o                         |                    | stp23l_init                                       | unreferenced |
 | .bss.init.asrpro1 (22487)         | init.o                           |                    | asrpro1                                           | unreferenced |
@@ -15507,7 +15507,7 @@ Note:
 |  (22543)                          |                                  |                    |                                                   |              |
 | .bss.init.encoder_y (22482)       | init.o                           |                    | encoder_y                                         | unreferenced |
 | .bss.init.motor2 (22478)          | init.o                           |                    | motor2                                            | unreferenced |
-| .bss.init.lidar2 (22484)          | init.o                           |                    | lidar2                                            | unreferenced |
+| .bss.init.lidar_front (22484)          | init.o                           |                    | lidar_front                                            | unreferenced |
 | .text.key.key_get_msg (22839)     | key.o                            |                    | key_get_msg                                       | unreferenced |
 | .text.key.key_send_msg (22840)    | key.o                            |                    | key_send_msg                                      | unreferenced |
 | .text.lcd.lcd_show_float_color    | lcd.o                            |                    | lcd_show_float_color                              | unreferenced |

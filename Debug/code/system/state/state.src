@@ -381,8 +381,8 @@ event_waitting_pos:	.type	func
 	jeq	d15,d0,.L30
 	j	.L31
 .L29:
-	movh.a	a4,#@his(lidar3)
-	lea	a4,[a4]@los(lidar3)
+	movh.a	a4,#@his(lidar_right)
+	lea	a4,[a4]@los(lidar_right)
 .L225:
 	lea	a5,[a10]0
 	call	stp23l_pop_frame
@@ -395,8 +395,8 @@ event_waitting_pos:	.type	func
 .L228:
 	st.w	[a15]4,d15
 .L229:
-	movh.a	a4,#@his(lidar1)
-	lea	a4,[a4]@los(lidar1)
+	movh.a	a4,#@his(lidar_left)
+	lea	a4,[a4]@los(lidar_left)
 .L230:
 	lea	a5,[a10]0
 	call	stp23l_pop_frame
@@ -425,8 +425,8 @@ event_waitting_pos:	.type	func
 .L240:
 	j	.L32
 .L30:
-	movh.a	a4,#@his(lidar3)
-	lea	a4,[a4]@los(lidar3)
+	movh.a	a4,#@his(lidar_right)
+	lea	a4,[a4]@los(lidar_right)
 .L241:
 	lea	a5,[a10]0
 	call	stp23l_pop_frame
@@ -439,8 +439,8 @@ event_waitting_pos:	.type	func
 .L244:
 	st.w	[a15]16,d15
 .L245:
-	movh.a	a4,#@his(lidar2)
-	lea	a4,[a4]@los(lidar2)
+	movh.a	a4,#@his(lidar_front)
+	lea	a4,[a4]@los(lidar_front)
 .L246:
 	lea	a5,[a10]0
 	call	stp23l_pop_frame
@@ -737,9 +737,9 @@ target_point:	.type	object
 	.extern	emm42_position_mode_cmd
 	.extern	emm42_send_cmd
 	.extern	servo_set_angle
-	.extern	lidar1
-	.extern	lidar2
-	.extern	lidar3
+	.extern	lidar_left
+	.extern	lidar_front
+	.extern	lidar_right
 	.extern	maixcam1
 	.extern	asrpro1
 	.extern	emm42_1
@@ -21453,13 +21453,13 @@ target_point:	.type	object
 	.byte	'MAX30102_mode_e',0,63,69,3
 	.word	157590
 	.byte	35
-	.byte	'lidar1',0,64,23,21
+	.byte	'lidar_left',0,64,23,21
 	.word	33571
 	.byte	1,1,35
-	.byte	'lidar2',0,64,24,21
+	.byte	'lidar_front',0,64,24,21
 	.word	33571
 	.byte	1,1,35
-	.byte	'lidar3',0,64,25,21
+	.byte	'lidar_right',0,64,25,21
 	.word	33571
 	.byte	1,1,35
 	.byte	'maixcam1',0,64,27,22
